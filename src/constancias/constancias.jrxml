@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="constancias" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8613da92-692a-451d-a406-fc35d1e769c4">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="75"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="150" y="31" width="292" height="43" uuid="3d42f6ee-4852-4653-a9d2-a2947e875ce2"/>
+				<textElement>
+					<font fontName="Arial Black" size="18"/>
+				</textElement>
+				<text><![CDATA[CONSTANCIA DOMICILIARIA]]></text>
+			</staticText>
+			<image>
+				<reportElement x="462" y="0" width="105" height="79" uuid="ef141dfe-a5d3-4a88-bb75-790b47e574a2"/>
+				<imageExpression><![CDATA["C:\\Users\\LEVARIO\\Desktop\\imagenes\\descarga.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="382" y="10" width="185" height="20" uuid="0bb7b57c-9440-4d30-872a-1dfc36442dd7"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="135" splitType="Stretch">
+			<image>
+				<reportElement x="-2" y="-114" width="152" height="109" uuid="e6ffbc95-6928-4865-8e2b-35640253ac64"/>
+				<imageExpression><![CDATA["C:\\Users\\LEVARIO\\Desktop\\imagenes\\images.jfif"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="0" y="51" width="572" height="74" uuid="ba08ab19-8e68-4ac1-95b3-52c9be396fc7"/>
+				<textElement>
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Con fundamento en los articulos 56 y 57 de la Ley Orgánica Municipal del 
+Estado de Mexico, Articulo 30 Libro Tercero del Compendio de la
+Reglamentacón Municipal de Amomolulco, por medio de la presente 
+hago constar que el (la) C.]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="220" height="29" uuid="e4f9a1ee-f359-4d3e-9ae3-fe5e48a9cd03"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[A quien corresponda:]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="105" width="313" height="20" uuid="32893156-3e6a-460c-99be-b15db2c3f4db"/>
+				<textElement>
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[NOMBRE DE QUIEN LA SOLICITA]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="109" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="79" width="238" height="30" uuid="db152046-9609-483e-b7e8-69d8f91bb672"/>
+				<textElement>
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[de esta Delegación desde hace ]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="238" y="79" width="329" height="30" uuid="97cb4884-cc12-4f7b-902f-3ca0f191d608"/>
+				<textElement>
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[TIEMPO QUE LLEVA VIVIENDO AHI]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="150" height="28" uuid="f9d11b9a-b256-4b18-8796-19f245248d3f"/>
+				<textElement>
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[tiene su domicilio en:]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="28" width="572" height="51" uuid="b7528f17-bf98-40ac-b42f-baf7a72eb3d2"/>
+				<textElement>
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[DOMICILIO]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="73" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="572" height="41" uuid="53313ed6-0610-43e3-b8ea-24999fb1bb7e"/>
+				<textElement>
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[
+situación que acredita presentando los siguientes documentos oficiales:
+]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="41" width="572" height="32" uuid="c66cd0e6-d89a-4c36-89c3-6f0cf8a6fd12"/>
+				<textElement>
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[UNA PARTE DE SU INE]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="77" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="572" height="51" uuid="05587f59-7ed5-4ed1-986a-bede06e520da"/>
+				<textElement>
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[se extiende el presente documento a petición del (la) interesado (a)
+para los efectos legales a que haya lugar:]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="38" width="572" height="39" uuid="3fa00275-ce6d-43e7-8ba2-54242340d6a1"/>
+				<textElement>
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[
+                                                         ATENTAMENTE]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="164" splitType="Stretch">
+			<textField>
+				<reportElement x="442" y="144" width="80" height="20" uuid="f0d39be3-1deb-4c8d-8de1-f0ed1de74e43"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="527" y="144" width="40" height="20" uuid="866af874-6e66-41cf-ab9e-395d0ba48b5b"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="57" y="56" width="181" height="35" uuid="fefbc7d1-7d1b-4ea6-9fb3-fda700dea008"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[DELEGADO (A) Municipal]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="15" y="37" width="238" height="19" uuid="83865e29-cddb-4a5d-b673-55ef0ac844fb"/>
+				<textFieldExpression><![CDATA[________________________________________]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="102" width="229" height="62" uuid="6ba78756-d3a4-4e5a-8fda-aa2ea4eaea30"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Ayuntamiento de Lerma 2016-2018
+ Direccion de Desarrollo Social
+       www.lerma.gob.mx]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="18" width="344" height="19" uuid="af3da3bb-12dd-4ca8-9ba0-9fe21a9de200"/>
+				<textFieldExpression><![CDATA[                      NOMBRE DEL DELEGADO]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="37" width="140" height="19" uuid="5b17edf1-1d97-41a5-af19-f804b3701b05"/>
+				<textFieldExpression><![CDATA[______________________]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="442" y="56" width="48" height="21" uuid="28d6dbd7-058b-445d-8fc8-1255efacdc88"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[FIRMA]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
