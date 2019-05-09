@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="constancias" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8613da92-692a-451d-a406-fc35d1e769c4">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="75"/>
+	<property name="ireport.y" value="76"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -68,7 +68,7 @@ hago constar que el (la) C.]]></textFieldExpression>
 				<textElement>
 					<font fontName="Arial" size="16"/>
 				</textElement>
-				<textFieldExpression><![CDATA[de esta Delegación desde hace ]]></textFieldExpression>
+				<textFieldExpression><![CDATA[de esta Delegación desde hace]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="238" y="79" width="329" height="30" uuid="97cb4884-cc12-4f7b-902f-3ca0f191d608"/>
@@ -100,9 +100,7 @@ hago constar que el (la) C.]]></textFieldExpression>
 				<textElement>
 					<font fontName="Arial" size="16"/>
 				</textElement>
-				<textFieldExpression><![CDATA[
-situación que acredita presentando los siguientes documentos oficiales:
-]]></textFieldExpression>
+				<textFieldExpression><![CDATA[situación que acredita presentando los siguientes documentos oficiales:]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="0" y="41" width="572" height="32" uuid="c66cd0e6-d89a-4c36-89c3-6f0cf8a6fd12"/>
@@ -128,8 +126,7 @@ para los efectos legales a que haya lugar:]]></textFieldExpression>
 				<textElement>
 					<font fontName="Arial" size="16"/>
 				</textElement>
-				<textFieldExpression><![CDATA[
-                                                         ATENTAMENTE]]></textFieldExpression>
+				<textFieldExpression><![CDATA[ATENTAMENTE]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageFooter>
@@ -166,7 +163,7 @@ para los efectos legales a que haya lugar:]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="0" y="18" width="344" height="19" uuid="af3da3bb-12dd-4ca8-9ba0-9fe21a9de200"/>
-				<textFieldExpression><![CDATA[                      NOMBRE DEL DELEGADO]]></textFieldExpression>
+				<textFieldExpression><![CDATA[NOMBRE DEL DELEGADO]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="400" y="37" width="140" height="19" uuid="5b17edf1-1d97-41a5-af19-f804b3701b05"/>
