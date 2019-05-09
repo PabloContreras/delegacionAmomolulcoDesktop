@@ -4,6 +4,12 @@ import java.sql.Connection;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import modelo.Conexion;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
 import sun.util.logging.PlatformLogger;
 
 /*
@@ -91,13 +97,13 @@ public class Constancia extends javax.swing.JFrame {
         JasperReport reporte = null;
         String path ="_______________________";//AQUI VA LA RUTA DEL REPORTE QUE SE GENERO DE TIPO .JASPERTREPORT
                          //EJEMPLO "SRC\\Reportes\\Constancias.jaspert"
-        reporte =(JaspertReport)JRLoader.loadObjectFromFile(path);   
+        reporte =(JasperReport)JRLoader.loadObjectFromFile(path);   
         
         JasperPrint jprint = JasperFillManager.fillReport(reporte, null, conn);
         
-        JasperPrint view =  new JasperViewer(jprint, false);
+        JasperViewer view =  new JasperViewer(jprint, false);
         
-        view.setDefaultcloseOperation(DISPOSE_ON_CLOSE);
+        view.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         
         view.setVisible(true);
         
@@ -126,13 +132,13 @@ public class Constancia extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ConstanciaJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Constancia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ConstanciaJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Constancia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ConstanciaJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Constancia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ConstanciaJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Constancia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
