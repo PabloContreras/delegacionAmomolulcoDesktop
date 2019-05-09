@@ -1,5 +1,11 @@
 package panel;
 
+import java.sql.Connection;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import modelo.Conexion;
+import sun.util.logging.PlatformLogger;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,12 +16,12 @@ package panel;
  *
  * @author Ricardo Fernandez
  */
-public class ConstanciaJFrame extends javax.swing.JFrame {
+public class Constancia extends javax.swing.JFrame {
 
     /**
      * Creates new form ConstanciaJFrame
      */
-    public ConstanciaJFrame() {
+    public Constancia() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -30,7 +36,7 @@ public class ConstanciaJFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jFrame1 = new javax.swing.JFrame();
-        jLabel1 = new javax.swing.JLabel();
+        btngenerarconstancia = new javax.swing.JButton();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -48,25 +54,60 @@ public class ConstanciaJFrame extends javax.swing.JFrame {
         setBackground(new java.awt.Color(140, 240, 240));
         setIconImages(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenP/images.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        jLabel1.setMaximumSize(new java.awt.Dimension(300, 168));
+        btngenerarconstancia.setText("Generar Constancia");
+        btngenerarconstancia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btngenerarconstanciaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(btngenerarconstancia)
+                .addContainerGap(61, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(91, 91, 91)
+                .addComponent(btngenerarconstancia)
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btngenerarconstanciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngenerarconstanciaActionPerformed
+
+        // TODO add your handling code here:
+        try {
+        Conexion con= new Conexion();
+        Connection conn = con.getConexion();
+        
+        JasperReport reporte = null;
+        String path ="_______________________";//AQUI VA LA RUTA DEL REPORTE QUE SE GENERO DE TIPO .JASPERTREPORT
+                         //EJEMPLO "SRC\\Reportes\\Constancias.jaspert"
+        reporte =(JaspertReport)JRLoader.loadObjectFromFile(path);   
+        
+        JasperPrint jprint = JasperFillManager.fillReport(reporte, null, conn);
+        
+        JasperPrint view =  new JasperViewer(jprint, false);
+        
+        view.setDefaultcloseOperation(DISPOSE_ON_CLOSE);
+        
+        view.setVisible(true);
+        
+        
+        
+        }catch (JRException ex){
+            Logger.getLogger(Constancia.class.getName()).log(Level.SEVERE,null,ex);
+        }
+        
+    }//GEN-LAST:event_btngenerarconstanciaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -98,13 +139,13 @@ public class ConstanciaJFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ConstanciaJFrame().setVisible(true);
+                new Constancia().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btngenerarconstancia;
     private javax.swing.JFrame jFrame1;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
