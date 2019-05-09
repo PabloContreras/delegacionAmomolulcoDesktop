@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 
 public class Conexion {
     
-    private final String base = "constancias";
+    private final String base = "constancias"; //base de datos
     private final String user = "root";
     private final String password = "tujefa123456";
     private final String url = "jdbc:mysql://localhost/constancias" + base;
