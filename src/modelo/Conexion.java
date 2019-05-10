@@ -1,6 +1,6 @@
 
 package modelo;
-
+//////////////////////
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -9,10 +9,10 @@ import java.util.logging.Logger;
 
 public class Conexion {
     
-    private final String base = "tumama";
+    private final String base = "constancias"; //base de datos
     private final String user = "root";
     private final String password = "tujefa123456";
-    private final String url = "jdbc:mysql://localhost/tumama" + base;
+    private final String url = "jdbc:mysql://localhost/constancias" + base;
     private Connection con = null;
     
     public Connection getConexion()
